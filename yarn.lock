@@ -1035,6 +1035,13 @@
   dependencies:
     "@better-scroll/shared-utils" "^2.0.0-beta.6"
 
+"@better-scroll/pull-up@^2.0.0-beta.6":
+  version "2.0.0-beta.6"
+  resolved "https://registry.npm.taobao.org/@better-scroll/pull-up/download/@better-scroll/pull-up-2.0.0-beta.6.tgz#8c5edbf8d7796dcb1a28db256d43b0a3d918fd05"
+  integrity sha1-jF7b+Nd5bcsaKNslbUOwo9kY/QU=
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.6"
+
 "@better-scroll/shared-utils@^2.0.0-beta.6":
   version "2.0.0-beta.6"
   resolved "https://registry.npm.taobao.org/@better-scroll/shared-utils/download/@better-scroll/shared-utils-2.0.0-beta.6.tgz#5534d80bfd230908a1d637ce742f2067545d56cc"
@@ -9303,6 +9310,11 @@ react-error-overlay@^6.0.7:
   version "6.0.7"
   resolved "https://registry.npm.taobao.org/react-error-overlay/download/react-error-overlay-6.0.7.tgz#1dcfb459ab671d53f660a991513cb2f0a0553108"
   integrity sha1-Hc+0WatnHVP2YKmRUTyy8KBVMQg=
+
+react-image-layout@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/react-image-layout/download/react-image-layout-1.0.0.tgz#57169c0f71b04db25c2ec8a1693b67a552b5b7af"
+  integrity sha1-VxacD3GwTbJcLsihaTtnpVK1t68=
 
 react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.9.0:
   version "16.13.1"

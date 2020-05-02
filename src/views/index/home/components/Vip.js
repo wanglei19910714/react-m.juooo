@@ -24,8 +24,7 @@ export default class Vip extends Component {
                         autoplay={true}
                         autoplayInterval={3000}
                         infinite
-                        beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-                        afterChange={index => console.log('slide to', index)}
+                       
                         >
                         {this.props.list.map((item,index) => (
                         <div className="vip-swiper-item" key={index}>

@@ -40,7 +40,7 @@ export default class FloorShow extends Component {
                     </div>
                     <ul className="list">
                         {this.props.list.slice(1).map((item,index)=>{
-                          return  <li>
+                          return  <li key={index}> 
                           <img src={item.pic} alt="test"/>
                         <h3>{item.schedular_name}</h3>
                         <span>¥{parseInt(item.low_price)}</span><i> 起</i>

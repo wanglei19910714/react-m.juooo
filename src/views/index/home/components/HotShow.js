@@ -19,7 +19,7 @@ export default class HotShow extends Component {
                     </div>
                     <ul className="list">
                         {this.props.list.map((item,index)=>{
-                          return  <li>
+                          return  <li key={index}>
                           <img src={item.pic} alt="test"/>
                         <h3>{item.show_name}</h3>
                           </li>

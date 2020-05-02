@@ -12,8 +12,7 @@ export default class Swiper extends Component {
                   {this.props.list.length === 0 ? '' :  <Carousel
           autoplay={true}
           infinite
-          beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-          afterChange={index => console.log('slide to', index)}
+          
         >
           {this.props.list.map((item,index) => (
             <a

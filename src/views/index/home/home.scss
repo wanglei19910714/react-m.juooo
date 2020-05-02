@@ -1,3 +1,14 @@
+.home-pages{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    .scroll-wrapper{
+        flex: 1;
+        overflow: hidden;
+    }
+}
+
+
 .header{
     display: flex;
     align-items: center;
@@ -304,5 +315,24 @@
              font-size: .12rem;
              color: #aaa7a7;
          }
+     }
+ }
+
+ .best-wrapper{
+     padding: 0 .15rem;
+     
+     img{
+         border-radius: .04rem .04rem 0 0 ;
+         display:block;
+     }
+     h2{
+        height: .38rem;
+        padding: .1rem .15rem .05rem;
+        font-size: .18rem;
+     }
+     .list{
+        padding-top: 0.05rem;
+        column-count: 2;
+        column-gap: .05rem;
      }
  }

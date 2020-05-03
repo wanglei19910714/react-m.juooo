@@ -3,61 +3,67 @@ import React, { Component } from 'react'
 import Header from './components/Header'
 import Nav from './components/Nav'
 import AdTypeZero from '../../components/adType/AdTypeZero'
+import {connect} from 'react-redux'
 import './perform.scss'
-import {getCategoryList,getShowList} from '../../api/perform'
+import {getShowList} from '../../api/perform'
 import BScroll from '@better-scroll/core'
-export default class Perform extends Component {
+ class Perform extends Component {
   constructor(){
     super();
     this.state = {
-      category:0,
-      categoryList:[],
-      showList:[]
+      categoryId:0,
+      showList:[],
     }
   }
-
+  
   async  componentDidMount(){
-    let cate = await getCategoryList()
-    let show = await getShowList({category:this.category})
-
+    let categoryId = this.props.match.params.categoryId ? this.props.match.params.categoryId : 0
+   
+    let show = await getShowList({category:categoryId,city_id:this.props.currentCityId})
+    
     this.setState({
-      categoryList:cate.data.data,
-      showList:show.data.data.list
+     
+      showList:show.data.data.list,
+      categoryId:categoryId
     })
-
-    setTimeout(()=>{
-      this.initScroll()
-    },1000)
+    this.initScroll()
+   
    
   }
-
-
   initScroll(){
-    this.bscroll = new BScroll('.scroll-wrapper', {
+    this.bscroll = new BScroll('.scroll-wrapper-list', {
         scrollY: true,
         click: true,
         probeType: 3 
-       
       })
-     
-}
+  }
+
+  //列表数据
+  updateShowList= async(category=this.state.categoryId,city_id = this.props.currentCityId)=> {
+    let show = await getShowList({category,city_id})
+    this.setState({
+      showList:show.data.data.list,
+      categoryId:category
+    })
+  }
 
 
   render(){
     return <div className="perform-pages">
       <Header></Header>
-      <Nav list={this.state.categoryList}></Nav>
-      <div className="scroll-wrapper">
-          <div className="list100 scroll-content">
-                    {this.state.showList.map((item,index)=>{
-                      return <AdTypeZero item={item} key={index}></AdTypeZero>
-                    })}
-                   
+      <Nav updateShowList={this.updateShowList} 
+        categoryId={this.props.match.params.categoryId}
+      >
+      </Nav>
+      <div className="scroll-wrapper-list">
+          <div className="list">
+              {this.state.showList.map((item,index)=>{
+                return <AdTypeZero item={item} key={index}></AdTypeZero>
+              })}
          </div>
       </div>  
-     
     </div>
   }
-   
-  
 }
+
+export default connect(state=>state.city)(Perform)

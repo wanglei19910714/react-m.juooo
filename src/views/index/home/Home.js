@@ -79,7 +79,6 @@ export default class Index extends Component {
             scrollY: true,
             click: true,
             probeType: 3 ,
-            scrollY: true,
             pullUpLoad: true
           })
           this.bscroll.on('pullingUp', this.pullingUpHandler.bind(this))  

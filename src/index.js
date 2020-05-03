@@ -7,10 +7,13 @@ import './static/css/common.css'
 import './static/css/reset.css'
 import 'antd-mobile/dist/antd-mobile.css';
  
+import {Provider} from 'react-redux'
+import store from './store'
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 

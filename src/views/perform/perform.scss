@@ -1,6 +1,9 @@
 .perform-pages{
     color: #232323;
+    display: flex;
+    flex-direction: column;
     height: 100%;
+     
 }
 
 .header-wrapper{
@@ -20,6 +23,7 @@
     display: flex;
     align-items: center;
     font-size: .15rem;
+    position: relative;
    .scroll-wrapper{
         flex: 1;
         white-space:nowrap;
@@ -55,22 +59,100 @@
             height: .13rem;
         }
     }
+
+
+    .cityList{
+        position: absolute;
+        width: 100%;
+        height: 93.1vh;
+        left: 0;
+        top:.0;
+        z-index: 99;
+        transition: all 0.5s;
+    }
+
+    .city_hidden {
+        transform: translate(100%, 0);
+    }
+      
+    .city_show{
+        transform: translate(0, 0);
+    }
 }
 
-.perform-pages{
-    display: flex;
-    flex-direction: column;
-}
 
-.scroll-wrapper{
+
+.scroll-wrapper-list{
    flex: 1;
-    .list100{
+    overflow-y: auto;
+    .list{
         padding: 0 .15rem;
         padding-top: 0.05rem;
         column-count: 2;
         column-gap: .05rem;
          
     }   
+}
+
+.city-wrapper{
+    display: flex;
+    height: 100%;
+    .city-left{
+        width: .8rem;
+        height: 100%;
+        background: rgba($color: #000000, $alpha: 0.5);
+    }
+    .city-right{
+        overflow-y: auto;
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        h1{
+            color: #666;
+            font-size: .15rem;
+            padding-left: .15rem;
+        }
+        
+        .list-scroll-wrapper{
+            flex: 1;
+            overflow-y: auto;
+            padding: 0 .09rem 0 .15rem;
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                    width: .84rem;
+                    line-height: .31rem;
+                    background: #F5F5F5;
+                    margin: 0 .06rem .06rem 0;
+                    font-size: .12rem;
+                    text-align: center;
+                    
+                }
+                .active{
+                    background-color: #fff1e9;
+                    color: #ff6743;
+                }
+            }
+        }
+        .foot{
+            display: flex;
+            justify-content: center;
+            align-items: centers;
+            border-top: 1px solid rgb(236, 232, 232);
+           div{
+               width: 50%;
+               line-height: .45rem;
+               text-align: center;
+            }
+           }
+           .sure{
+               background: #FF6743;
+              
+        }
+    }
 }
 
 

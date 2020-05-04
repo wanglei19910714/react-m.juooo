@@ -1,0 +1,140 @@
+.content-header{
+    position: relative;
+    .bgImg{
+        width: 100%;
+        height: 2.17rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+       
+        img{
+            width: 100%;
+            height: 100%;
+            filter: blur(.2rem)
+        }
+    }
+
+
+    .header-wrapper{
+        .am-navbar-light{
+            color:#000;
+        }
+        .am-navbar-title {
+            font-weight: 350;
+            color: #000;
+        }
+    }
+
+    .primary-wrapper{
+        position: relative;
+        height: 1.57rem;
+        padding: 0 .15rem;
+        display: flex;
+        color: #FEFEEF;
+        img{
+            width: 1.1rem;
+            height: 1.5rem;
+        } 
+        .txt{
+            margin: .22rem 0 0 .14rem;
+            font-size: .16rem;
+            h3{
+                font-weight: 300;
+            }
+        }
+        p{
+            margin-top: .5rem;
+            font-size: .2rem;
+        }
+     }
+}
+
+
+.content-wrapper{
+    color: #232323;
+    overflow-y: auto;
+    .support{
+        padding: 0 .15rem;
+        border-bottom: 1px solid rgb(231, 228, 228);
+        line-height: .41rem;
+        span{
+            margin-right: .04rem;
+        }
+    }
+    .secondary{
+        padding:0 .15rem .21rem;
+        display: flex;
+        height: 1.12rem;
+        .secondary-info{
+            flex: 1;
+            .time{
+                line-height: .4rem;
+                font-size: .18rem;
+                font-weight: 200;
+            }
+            .plcae{
+               margin:.1rem 0;
+            }
+        }
+        .pointer{
+            margin-top:.6rem;
+            img{
+                width: .2rem;
+                height: .2rem;
+              
+            }
+        }
+    }
+
+    .intro{
+        padding: 0 .15rem;
+        .title{
+            font-size: .18rem;
+            margin: .15rem 0;
+        }
+        .intro_content{
+            line-height: .25rem;
+        }
+    }
+
+   
+}
+
+.bottom_bar{
+    background: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    // background: red;
+    width: 100%;
+    height: .55rem;
+    border-top: 1px solid rgb(218, 214, 214);
+}
+
+
+// .detail-pages{
+//     position: relative;
+
+
+   
+// }        
+
+.dialog{
+    width: 100%;
+    height: 5rem;
+    background: blue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s;
+
+   
+}
+
+.city_hidden {
+    transform:translate(0,100%);
+}
+  
+.city_show{
+    transform: translate(0, 0);
+}
